@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class ArrayCopy
 {
 	public static void main(String[] args) 
@@ -7,20 +8,30 @@ class ArrayCopy
 
 	public static void copyArray()
 	{
-		int a[]={30,50,20,90,78};
-		int b[]=new int[a.length];
+		int a[]=new int[20];
+		int b[]=new int[20];
+		Scanner scan=new Scanner(System.in);
 
-		for(int i=0;i<a.length;i++)
+		System.out.print("\nEnter the size of array:");
+		int size=scan.nextInt();
+
+		System.out.print("Enter the values:\n");
+		for(int i=0;i<size;i++)
+		{
+			a[i]=scan.nextInt();
+		}
+
+		for(int i=0;i<size;i++)
 		{
 			b[i]=a[i];
 		}
 		System.out.println("\nThe elements of a is:");
-		for(int i=0;i<a.length;i++)
+		for(int i=0;i<size;i++)
 		{
 			System.out.print(a[i]+" ");
 		}
 		System.out.println("\nThe elements of b is:");
-		for(int i=0;i<b.length;i++)
+		for(int i=0;i<size;i++)
 		{
 			System.out.print(b[i]+" ");
 		}

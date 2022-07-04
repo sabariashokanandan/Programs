@@ -14,11 +14,6 @@ class ArrayDemo
 		for(int i=0;i<4;i++)
 		{
 			System.out.println(courses[i]+":"+"a["+i+"]");
-			/*for(int j=i-0;j<courses.length;j++)
-				{
-					System.out.println("a["+j+"]");
-					break;
-				}*/
 		}
 	}
 }

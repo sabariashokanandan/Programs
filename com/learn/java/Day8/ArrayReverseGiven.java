@@ -8,25 +8,36 @@ class ArrayReverseGiven
 	public static void printReverse()
 	{
 		Scanner scan=new Scanner(System.in);
-		int	num[]=new int[5];
+		int	num[]=new int[20];
+		int temp;
 
-		System.out.println("Enter the five numbers:");
-		for(int i=0;i<num.length;i++)
+		System.out.print("\nEnter the size of array:");
+		int size=scan.nextInt();
+
+		System.out.println("Enter the numbers:");
+		for(int i=0;i<size;i++)
 		{
 			num[i]=scan.nextInt();
 		}
 
-		System.out.println("Array elements are: ");  
-		for(int i=0;i<num.length;i++)
-		{
-			System.out.println("num["+i+"]="+num[i]);
-		}
 		System.out.println();
 		
 		System.out.println("Reverse order:");
-		for(int i=num.length-1;i>=0;i--)
+
+		for(int i=0;i<size;i++)
 		{
-			System.out.println("num["+i+"]="+num[i]);
+			for(int j=size-1;j>=0;j--)
+			{
+				temp=num[j];
+				num[i]=num[j];
+				num[i]=temp;
+			}
 		}
+
+		for(int i=0;i<size;i++)
+		{
+			System.out.println(num[i]);
+		}
+		
 	}
 }

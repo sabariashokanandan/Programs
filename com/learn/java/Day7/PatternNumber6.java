@@ -11,7 +11,7 @@ class PatternNumber6
 
 		System.out.print("\nEnter the number:");
 		number=scan.nextInt();
-		System.out.print("Enter the increment order::");
+		System.out.print("Enter the increment order:");
 		increment=scan.nextInt();
 
 		for(int i=1,q=1;i<=number-1;i++,q+=increment)// 1<=4
