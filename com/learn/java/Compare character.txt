@@ -1,0 +1,6 @@
+value='h'
+Char.toUpperCase(value)='H'
+value='G'
+Char.toLowerCase(value)='g'
+value='u'
+int ch1=value=117
