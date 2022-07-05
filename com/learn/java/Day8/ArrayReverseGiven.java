@@ -8,11 +8,13 @@ class ArrayReverseGiven
 	public static void printReverse()
 	{
 		Scanner scan=new Scanner(System.in);
-		int	num[]=new int[20];
+		int	num[],numcopy[];
 		int temp;
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		num=new int[size];
+		numcopy=new int[size];
 
 		System.out.println("Enter the numbers:");
 		for(int i=0;i<size;i++)
@@ -21,22 +23,18 @@ class ArrayReverseGiven
 		}
 
 		System.out.println();
+		int n=size;
 		
 		System.out.println("Reverse order:");
 
-		for(int i=0;i<size;i++)
+		for(int i=0;i<size;i++,n--)
 		{
-			for(int j=size-1;j>=0;j--)
-			{
-				temp=num[j];
-				num[i]=num[j];
-				num[i]=temp;
-			}
+			numcopy[n-1]=num[i];
 		}
 
 		for(int i=0;i<size;i++)
 		{
-			System.out.println(num[i]);
+			System.out.println(numcopy[i]);
 		}
 		
 	}

@@ -10,11 +10,12 @@ class ArrayReplace
 
 	public static void findReplace()
 	{
-		int numbers[]=new int[20];
+		int numbers[];
 		Scanner scan=new Scanner(System.in);
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		numbers=new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)

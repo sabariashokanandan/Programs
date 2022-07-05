@@ -8,12 +8,14 @@ class ArrayCopy
 
 	public static void copyArray()
 	{
-		int a[]=new int[20];
-		int b[]=new int[20];
+		int a[];
+		int b[];
 		Scanner scan=new Scanner(System.in);
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		a=new int[size];
+		b=new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)

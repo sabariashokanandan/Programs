@@ -9,7 +9,7 @@ class ArrayLargest
 
 	public static void findLargest()
 	{
-		int num[]=new int[20];
+		int num[]
         Scanner scan=new Scanner(System.in);
 
         int large1=Integer.MIN_VALUE;
@@ -17,6 +17,7 @@ class ArrayLargest
 
         System.out.print("\nEnter the size of array:");
         int size=scan.nextInt();
+        num=new int[size];
 
         System.out.print("Enter the values:\n");
         for(int i=0;i<size;i++)

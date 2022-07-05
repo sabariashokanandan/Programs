@@ -7,11 +7,12 @@ class ArrayReverse
 
 	public static void printReverse()
 	{
-		int	num[]=new int[20];
+		int	num[];
 		Scanner scan=new Scanner(System.in);
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		num=new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)

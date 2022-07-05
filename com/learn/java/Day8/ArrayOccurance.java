@@ -8,12 +8,13 @@ class ArrayOccurance
 
 	public static void findOccurance()
 	{
-		int values[]=new int[20];
+		int values[]
 		int check;
 		Scanner scan=new Scanner(System.in);
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		values==new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)

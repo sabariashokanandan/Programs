@@ -9,7 +9,7 @@ class ArraySmallest
 
 	public static void findSmallest()
 	{
-		int num[]=new int[20];
+		int num[]
 		Scanner scan=new Scanner(System.in);
 
 		int low1=Integer.MAX_VALUE;
@@ -18,6 +18,7 @@ class ArraySmallest
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
+		num==new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)

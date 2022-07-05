@@ -9,11 +9,12 @@ class ArraySum
 	public static void printSum()
 	{
 		Scanner scan=new Scanner(System.in);
-		int num[]=new int[20];
+		int num[];
 		int oddSum=0,evenSum=0;
 
 		System.out.println("\nEnter the n:");
 		int n=scan.nextInt();
+		num=new int[n];
 
 		System.out.println("Enter the"+n+" numbers:");
 		for(int i=0;i<n;i++)
