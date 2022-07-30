@@ -8,13 +8,14 @@ class ArrayOccurance
 
 	public static void findOccurance()
 	{
-		int values[]
+		int values[];
 		int check;
+		boolean countOccurence=false;
 		Scanner scan=new Scanner(System.in);
 
 		System.out.print("\nEnter the size of array:");
 		int size=scan.nextInt();
-		values==new int[size];
+		values=new int[size];
 
 		System.out.print("Enter the values:\n");
 		for(int i=0;i<size;i++)
@@ -30,10 +31,20 @@ class ArrayOccurance
 			if(check==values[i])
 			{
 				System.out.println("The occurence of "+check+" is "+"values["+i+"]");
+				countOccurence=true;
 				
 			}
 	
 		}
+		if(countOccurence==false)// check this condition as tree ways(boolean!=true)
+		{
+			//System.out.println("The occurence of "+check+" is "+"values["+index+"]");
+			System.out.println("Not found");
+		}
+		/*else 
+		{
+			System.out.println("Not found");
+		}*/
 
 	}
 }

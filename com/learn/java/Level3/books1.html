@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    background-color: white;
+    color: black;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+    </style>
+    <script type="text/javascript">
+      function myFunction1() {
+        var x = document.getElementById("textboxes");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFunction2() {
+        var x = document.getElementById("textboxes2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myDeleteFunction() {
+  document.getElementById("tb1").deleteRow(1);
+}
+
+        function addBook()
+        {
+            var bookadd=document.form1.bookname.value;
+            var authoradd=document.form1.authorname.value;
+            var genreadd=document.form1.genre.value;
+
+            var tr= document.createElement('tr');
+
+            var td1= tr.appendChild(document.createElement('td'));
+            var td2=tr.appendChild(document.createElement('td'));
+            var td3=tr.appendChild(document.createElement('td'));
+
+            td1.innerHTML=bookadd;
+            td2.innerHTML=genreadd;
+            td3.innerHTML=authorname;
+
+            document.getElementById("tb1").appendChild(tr);
+        }
+    </script>
+</head>
+<body style="background-color: grey; color:white">
+   
+ <div class="container">
+<h2 class="heading" style="text-align:center"><b>Books</b></h2>
+
+<div class="buttoncontainer" style="text-align: center">
+<button type="button" id="b1" class="button button1" onClick="myFunction1()">Add</button>
+<button type="button" id="b2" class="button button2"onClick="myFunction2()">Delete</button>
+</div>
+
+<div id="textboxes" style="text-align: center;display:none">
+    
+        <form method="POST" name="form1"  >
+            Book name:<input type="text" name="bookname">
+            Author:<input type="text" name="authorname">
+            Genre:<input type="text" name="genre">
+            <br><br>
+            <input type="button" name="add" value="Add Data" onclick="addBook()">
+            </form>
+</div>
+
+<div id="textboxes2" style="text-align: center;display:none">
+    <button type="button" id="b2" onClick="myDeleteFunction()">Delete row</button>
+</div>
+
+    <table id="tb1" class="styled-table" style="margin-left: auto;margin-right: auto;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="novel1.html">Dark room</a></td>
+            <td>Thriller</td>
+            <td>Gosling</td>
+        </tr>
+        <tr>
+            <td><a href="novel2.html">Guide</a></td>
+            <td>Romantic</td>
+            <td>osborn</td>
+        </tr>
+        <tr>
+            <td><a href="novel3.html">Talkative man</a></td>
+            <td>Comedy</td>
+            <td>dinesh</td>
+        </tr>
+        <tr>
+            <td><a href="novel4.html">Golden gate</a></td>
+            <td>Fantasy</td>
+            <td>ram</td>
+        </tr>
+        <tr>
+            <td><a href="novel5.html">A suitable boy</a></td>
+            <td>Comedy</td>
+            <td>karthick</td>
+        </tr>
+        <tr>
+            <td><a href="novel6.html">An equal music</a></td>
+            <td>Romantic</td>
+            <td>dinesh</td>
+        </tr>
+        <tr>
+            <td><a href="novel7.html">Grimus</a></td>
+            <td>Thriller</td>
+            <td>dinesh</td>
+        </tr>
+        <tr>
+            <td><a href="novel8.html">Midnight's childeren</a></td>
+            <td>Fantasy</td>
+            <td>ram</td>
+        </tr>
+        <tr>
+            <td><a href="novel9.html">Shame</a></td>
+            <td>Comedy</td>
+            <td>murugan</td>
+        </tr>
+        <tr>
+            <td><a href="novel10.html">The algebra of infinite justice</a></td>
+            <td>Fantasy</td>
+            <td>sathish</td>
+        </tr>
+        <tr>
+            <td><a href="novel11.html">The god of small things</a></td>
+            <td>Thriler</td>
+            <td>harish</td>
+        </tr>
+        <tr>
+            <td><a href="novel12.html">The ministry of utmost happiness</a></td>
+            <td>Horror</td>
+            <td>sathish</td>
+        </tr>
+        <tr> 
+            <td><a href="novel13.html">Selection day</a></td>
+            <td>Comedy</td>
+            <td>harish</td>
+        </tr>
+        <tr>
+            <td><a href="novel14.html">Last man in tower</a></td>
+            <td>Romantic</td>
+            <td>murugan</td>
+        </tr>
+        <tr>
+            <td><a href="novel15.html">Between the assassinations</a></td>
+            <td>Thriller</td>
+            <td>dinesh</td>
+        </tr>
+
+        
+    </tbody>
+</table>
+
+    <p class="w3-justify">
+
+</body>
+</html>

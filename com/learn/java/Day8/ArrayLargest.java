@@ -12,8 +12,8 @@ class ArrayLargest
 		int num[]
         Scanner scan=new Scanner(System.in);
 
-        int large1=Integer.MIN_VALUE;
-        int large2=Integer.MIN_VALUE;
+        int large1=-100000;
+        int large2=-100000;
 
         System.out.print("\nEnter the size of array:");
         int size=scan.nextInt();

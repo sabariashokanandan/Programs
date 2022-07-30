@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color: grey;">
+	<h2 style="text-align:center">Guide</h2>
+	<img src="2.jpg" style="width:10%;display:block;margin-left:auto;margin-right:auto">
+<p style="text-align:center">Raju (Nicknamed: Railway Raju) is a corrupt tour guide who is famous among tourists. He falls in love with a beautiful dancer, Rosie, the wife of archaeologist Marco. They have come to Malgudi, the fictional town in South India, as tourists. Marco does not approve of Rosie's passion for dancing. Rosie, encouraged by Raju, decides to follow her dreams and start a dancing career. In the process they become close to each other. On learning of their relationship, Marco leaves Rosie in Malgudi and goes back to Madras alone. Rosie turns up at the home of Raju and they start living together. But Raju's mother does not approve of their relationship and leaves them. Raju becomes Rosie's stage manager and soon, with the help of Raju's marketing tactics, Rosie becomes a successful dancer. Raju, however, develops an inflated sense of self-importance and tries to control her life. He wants to build as much wealth as possible. Raju gets involved in a case of forgery of Rosie's signature and gets a two-year sentence despite Rosie's best efforts to save him. After completing the sentence, Raju passes through a village, Mangal, where he is mistaken for a sadhu (a spiritual guide). Since he does not want to return in disgrace to Malgudi, he decides to stay in an abandoned temple, close to the village</p>
+</body>
+</html>

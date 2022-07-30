@@ -7,9 +7,9 @@ class ArrayDemo
 
 	public static void printArray()
 	{
-		String courses[]=new String[] {"engineering","mbbs","bcom","barch"};
+		String courses[]={"engineering","mbbs","bcom","barch"};
 
-		System.out.println("\nElements of array with address:");
+		System.out.println("\nElements of array with position:");
 		
 		for(int i=0;i<4;i++)
 		{
