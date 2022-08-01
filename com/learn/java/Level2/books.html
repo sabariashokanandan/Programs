@@ -32,72 +32,12 @@
     border-bottom: 2px solid #009879;
 }
     </style>
-    <script type="text/javascript">
-      function myFunction1() {
-        var x = document.getElementById("textboxes");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-function myFunction2() {
-        var x = document.getElementById("textboxes2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function myDeleteFunction() {
-  document.getElementById("tb1").deleteRow(1);
-}
-
-        function addBook()
-        {
-            var bookadd=document.form1.bookname.value;
-            var authoradd=document.form1.authorname.value;
-            var genreadd=document.form1.genre.value;
-
-            var tr= document.createElement('tr');
-
-            var td1= tr.appendChild(document.createElement('td'));
-            var td2=tr.appendChild(document.createElement('td'));
-            var td3=tr.appendChild(document.createElement('td'));
-
-            td1.innerHTML=bookadd;
-            td2.innerHTML=genreadd;
-            td3.innerHTML=authorname;
-
-            document.getElementById("tb1").appendChild(tr);
-        }
-    </script>
 </head>
 <body style="background-color: grey; color:white">
    
  <div class="container">
 <h2 class="heading" style="text-align:center"><b>Books</b></h2>
 
-<div class="buttoncontainer" style="text-align: center">
-<button type="button" id="b1" class="button button1" onClick="myFunction1()">Add</button>
-<button type="button" id="b2" class="button button2"onClick="myFunction2()">Delete</button>
-</div>
-
-<div id="textboxes" style="text-align: center;display:none">
-    
-        <form method="POST" name="form1" >
-            Book name:<input type="text" name="bookname">
-            Author:<input type="text" name="authorname">
-            Genre:<input type="text" name="genre">
-            <br><br>
-            <input type="button" name="add" value="Add Data" onclick="addBook()">
-            </form>
-</div>
-
-<div id="textboxes2" style="text-align: center;display:none">
-    <button type="button" id="b2" onClick="myDeleteFunction()">Delete row</button>
-</div>
 
     <table id="tb1" class="styled-table" style="margin-left: auto;margin-right: auto;">
     <thead>
