@@ -1,0 +1,24 @@
+{
+
+
+  "pageInfo": {
+    "totalResults": 10,
+    "resultsPerPage": 2,
+    "pageNo":1
+  },
+
+
+"results":[
+{
+"heading":"HTML For Beginners The Easy Way",
+"link":"https://html.com/",
+"description":"In just 3 hours, learn basic HTML, the skeleton of all web pages",
+},
+{
+"heading":"Learn HTML - Codecademy",
+"link":"https://www.codecademy.com/learn/learn-html",
+"description":"Learn how to code HTML & CSS for free at HTML.com",
+}
+]
+
+}

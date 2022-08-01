@@ -1,0 +1,57 @@
+{
+
+
+  "pageInfo": {
+    "totalResults": 10,
+    "resultsPerPage": 3,
+    "pageNo":1
+  },
+
+
+  "videos": [
+
+    {
+      "title": "Html creation",
+      "link": "http://www.youtube.com/watch?=sfsXDCScasa",
+        "channel": "Top codings",
+        "viewersCount": "156796",
+        "description":"The video showcases the html creation and design",
+        "verifiedStatus":true,
+        "responseContext":{"param":{"isLive":"no","contentLength":"22706900",
+          "quality":"large","fps":25,"qualityLabel":"480p",
+          "projectionType":"RECTANGULAR",
+          "averageBitrate":298696,
+          "approxDurationMs":"608160"}}
+      },
+
+      {
+      "title": "Html and jsp",
+      "link": "http://www.youtube.com/watch?=fdHGndAzxa",
+        "channel": "CodeBuzz",
+        "viewersCount": "267957",
+        "description":"How jsp and html are created is shown in this video",
+        "verifiedStatus":false,
+        "responseContext":{"param":{"isLive":"Yes","contentLength":"12706260",
+          "quality":"large","fps":23,"qualityLabel":"1080p",
+          "projectionType":"RECTANGULAR",
+          "averageBitrate":283615,
+          "approxDurationMs":"50160"}}
+      },
+
+    {
+      "title": "Html design",
+      "link": "http://www.youtube.com/watch?=DgfdgAdasa",
+        "channel": "Level coding",
+        "viewersCount": "275696",
+        "description":"The video showcases the html creation and design",
+        "verifiedStatus":true,
+        "responseContext":{"param":{"isLive":"no","contentLength":"345674900",
+          "quality":"large","fps":30,"qualityLabel":"360p",
+          "projectionType":"RECTANGULAR",
+          "averageBitrate":434566,
+          "approxDurationMs":"455446"}}
+      }
+
+  ]
+}
+

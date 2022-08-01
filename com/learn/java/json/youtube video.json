@@ -1,0 +1,37 @@
+{
+    "data": {
+        "id": "VA770wpLX-Q",
+        "uploaded": "2011-02-24",
+        "updated": "2012-04-08",
+        "uploader": "drdrevevo",
+        "category": "Music",
+        "title": "Dr. Dre - I Need A Doctor (Explicit) ft. Eminem, Skylar Grey",
+        "description": "Music video by Dr. Dre performing I Need A Doctor featuring Eminem and Skylar Grey (Explicit). © 2011 Aftermath Records",
+        "tags": ["Dr", "Dre", "Eminem", "New", "Song", "Skylar", "Grey", "GRAMMYs", "Dr.", "Need", "Doctor", "video", "Eazy", "N.W.A.", "NWA", "easy", "drdre", "and", "em"],
+        "thumbnail": {
+            "Default": "default.jpg",
+        },
+        "player": {
+            "default": "http://www.youtube.com/watch?v=VA770wpLX-Q&feature=youtube_gdata_player"
+        },
+        "duration": 457,
+        "aspectRatio": "widescreen",
+        "rating": 4.902695,
+        "likeCount": "430519",
+        "ratingCount": 441253,
+        "viewCount": 88270796,
+        "favoriteCount": 306556,
+        "commentCount": 270597,
+        
+        "accessControl": {
+            "comment": "allowed",
+            "commentVote": "allowed",
+            "videoRespond": "allowed",
+            "rate": "allowed",
+            "embed": "allowed",
+            "list": "allowed",
+            "autoPlay": "denied",
+            "syndicate": "allowed"
+        }
+    }
+}

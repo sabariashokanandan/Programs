@@ -1,0 +1,92 @@
+[
+				{
+				"Name":"Dark room",
+				"Author":"Gosling",
+				"Genre":"Thriller",
+				"Link":"novel1.html",
+			},
+				{
+				"Name":"Guide",
+				"Author":"osborn",
+				"Genre":"Romantic",
+				"Link":"novel2.html",
+			},
+				{
+				"Name":"Talkative man",
+				"Author":"dinesh",
+				"Genre":"Comedy",
+				"Link":"novel3.html",
+			},
+				{
+				"Name":"Golden gate",
+				"Author":"ram",
+				"Genre":"Fantasy",
+				"Link":"novel4.html",
+			},
+				{
+				"Name":"A suitable boy",
+				"Author":"karthick",
+				"Genre":"Comedy",
+				"Link":"novel5.html",
+			},
+			{
+				"Name":"An equal music",
+				"Author":"dinesh",
+				"Genre":"Romantic",
+				"Link":"novel6.html",
+			},
+			{
+				"Name":"Grimus",
+				"Author":"dinesh",
+				"Genre":"Thriller",
+				"Link":"novel7.html",
+			},
+			{
+				"Name":"Midnight's children",
+				"Author":"ram",
+				"Genre":"Fantasy",
+				"Link":"novel8.html",
+			},
+			{
+				"Name":"Shame",
+				"Author":"murugan",
+				"Genre":"Comedy",
+				"Link":"novel9.html",
+			},
+			{
+				"Name":"The algebra of infinite justice",
+				"Author":"sathish",
+				"Genre":"Fantasy",
+				"Link":"novel10.html",
+			},
+			{
+				"Name":"The god of small things",
+				"Author":"harish",
+				"Genre":"Thriller",
+				"Link":"novel11.html",
+			},
+			{
+				"Name":"The ministry of utmost happiness",
+				"Author":"sathish",
+				"Genre":"Horror",
+				"Link":"novel12.html",
+			},
+			{
+				"Name":"Selection day",
+				"Author":"harish",
+				"Genre":"Comedy",
+				"Link":"novel13.html",
+			},
+			{
+				"Name":"Last man in tower",
+				"Author":"murugan",
+				"Genre":"Romantic",
+				"Link":"novel14.html",
+			},
+			{
+				"Name":"Between the assassinations",
+				"Author":"dinesh",
+				"Genre":"Thriller",
+				"Link":"novel15.html",
+			}
+			]

@@ -1,0 +1,33 @@
+{
+
+
+  "bookInfo": {
+    "totalAuthors": 4,
+    "totalBooks": 15,
+  },
+
+
+"authors":[
+  {
+    "authorName":"Balakumaran",
+    "writtenBooks":5,
+    "books":{"book1":"Talkative man","book2":"Shame","book3":"Golden boy","book4":"Dark room","book5":"Guide"},
+  },
+  {
+    "authorName":"Ryan gosling",
+    "writtenBooks":3,
+    "books":{"book1":"Grimus","book2":"Last man in tower","book3":"Between the assasinations"},
+  },
+  {
+    "authorName":"Rangarajan",
+    "writtenBooks":4,
+    "books":{"book1":"The god of small things","book2":"Selection day","book3":"The algebra of infinite justice","book4":"Midinigth children"},
+  },
+  {
+    "authorName":"Osborn fredrick",
+    "writtenBooks":2,
+    "books":{"book1":"An equal music","book2":"Creepy life"}
+  }
+
+      ]
+}

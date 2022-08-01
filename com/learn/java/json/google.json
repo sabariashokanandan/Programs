@@ -1,0 +1,34 @@
+{
+
+
+  "pageInfo": {
+    "totalResults": 10,
+    "resultsPerPage": 4,
+    "pageNo":1
+  },
+
+
+"results":[
+{
+"heading":"Writing html",
+"link":"http://www.w3schools/html",
+"description":"Html creation",
+},
+{
+"heading":"creating html",
+"link":"http://tutorialspoint.com/html",
+"description":"Defining html",
+},
+{
+"heading":"html definition",
+"link":"http://www.htmlstudy.com",
+"description":"Study html",
+}
+{
+"heading":"Udemy: Online Courses - Learn Anything, On Your Schedule",
+"link":"https://www.udemy.com/",
+"description":"Udemy is an online learning and teaching marketplace with over 185000 courses",
+}
+]
+
+}
