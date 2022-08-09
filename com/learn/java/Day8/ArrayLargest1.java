@@ -9,21 +9,21 @@ class ArrayLargest1
 
 	public static void findLargest()
 	{
-		float num[]=null;
+		int num[]=null;
         Scanner scan=new Scanner(System.in);
 
         System.out.print("\nEnter the size of array:");
         int size=scan.nextInt();
-        num=new float[size];
+        num=new int[size];
 
         System.out.print("Enter the values:\n");
         for(int i=0;i<size;i++)
         {
-            num[i]=scan.nextFloat();
+            num[i]=scan.nextInt();
         }
 
-        float large1=num[0];
-        float large2=num[0];
+        int large1=num[0];
+        int large2=num[size-1];
 
         for (int i = 0; i < size; i++)//90 20 40 56 70
         {

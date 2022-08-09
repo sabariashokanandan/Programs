@@ -9,7 +9,7 @@ class ArrayLargest
 
 	public static void findLargest()
 	{
-		int num[]
+		int num[];
         Scanner scan=new Scanner(System.in);
 
         int large1=-100000;

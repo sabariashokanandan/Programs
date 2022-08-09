@@ -23,7 +23,7 @@ class ArrayReplace
 			numbers[i]=scan.nextInt();
 		}
 
-		System.out.print("\nEnter the number to check repeated:");
+		System.out.print("\nEnter the number to check replaced:");
 		int temp=scan.nextInt();
 		
 
@@ -34,17 +34,23 @@ class ArrayReplace
 				System.out.print("The "+temp+" is found\n");
 				System.out.print("Enter the value:");
 				numbers[j]=scan.nextInt();
+				System.out.println("The array is:");
+				for(int k=0;k<size;k++)
+				{
+					System.out.println(numbers[k]);
+				}
 				break;
 				
+			}
+			else 
+			{
+				System.out.println("Not found");
+				break;
 			}
 
 		}
 
-		System.out.println("The array is:");
-		for(int j=0;j<size;j++)
-		{
-			System.out.println(numbers[j]);
-		}
+		
 
 	}
 }
