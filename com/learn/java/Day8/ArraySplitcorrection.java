@@ -1,20 +1,21 @@
 import java.util.Scanner;
 
-class DeleteDuplicate
+class ArraySplit
 {
 	public static void main(String[] args)
 	{
-		removeDuplicates();
+		splitArray();
 	}
 
-	public static void removeDuplicates()
+	public static void splitArray()
 	{
-
 		Scanner scan = new Scanner(System.in);
 		System.out.print("\nEnter the Array size: ");
 		int size = scan.nextInt();
 
 		int num[] = new int[size];
+		int odd[] = new int[size];
+		int even[] = new int[size];
 		System.out.println("\nEnter the Array values: ");
 
 		for(int i=0;i<size;i++)
@@ -24,31 +25,15 @@ class DeleteDuplicate
 
 		System.out.print("\nOriginal array is: ");
 
-		for(int i=0;i<size;i++)
+		for(int j=0;j<size;j++)
 		{
-			System.out.print(num[i]+" ");
+			System.out.print(num[j]+" ");
 		}
 		System.out.println();
 
-		for(int i=0;i<size;i++)
+		for(m=0;m<size;m++)
 		{
-			for(int j=i+1;j<size;j++)
-			{
-				if(num[i]==num[j])
-				{
-					num[j]=num[size-1];
-					size--;
-					
-				}
-			}
+			for(n=0;m<)
 		}
-
-		System.out.print("\nArray without duplicate: ");
-		for(int i=0;i<size;i++)
-		{
-			System.out.print(num[i]+" ");
-		}
-		System.out.println();
 	}
-
 }
