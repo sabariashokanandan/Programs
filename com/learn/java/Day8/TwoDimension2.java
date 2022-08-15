@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class TwoDimension
+class TwoDimension2
 {
 	public static void main(String[] args)
 	{
@@ -9,21 +9,18 @@ class TwoDimension
 
 	public static void twoDimensionArray()
 	{
-		int row,column;
+		int row;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Enter the Size of row: ");
+		System.out.println("Enter the Size: ");
 		row = scan.nextInt();
-
-		System.out.print("Enter Size of column: ");
-		column = scan.nextInt();
 
 		int[][] num = new int[row][column];
 		System.out.println("\nEnter array values: ");
 
 		for(int i=0;i<row;i++)
 		{
-			for(int j=0;j<column;j++)
+			for(int j=0;j<row;j++)
 			{
 				num[i][j]=scan.nextInt();
 			}
@@ -33,7 +30,7 @@ class TwoDimension
 
 		for(int m=0;m<row;m++)
 		{
-			for(int n=0;n<column;n++)
+			for(int n=0;n<row;n++)
 			{
 				System.out.print(num[m][n]+" ");
 			}	

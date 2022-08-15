@@ -1,56 +1,60 @@
 import java.util.Scanner;
 
+import java.util.Arrays;
+
 class ArrayReplace
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		ArrayReplace replace=new ArrayReplace();
-		replace.findReplace();
+		findAndReplace();
 	}
 
-	public static void findReplace()
+	public static void findAndReplace()
 	{
-		int numbers[];
-		Scanner scan=new Scanner(System.in);
+		int array,search,rentry,count=0,replace;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("\nNumber of Arrays: ");
+		array = scan.nextInt();
 
-		System.out.print("\nEnter the size of array:");
-		int size=scan.nextInt();
-		numbers=new int[size];
-
-		System.out.print("Enter the values:\n");
-		for(int i=0;i<size;i++)
+		int index[] = new int[array];
+		System.out.println("\nNumber of index value: ");
+		for(int i=0;i<array;i++)
 		{
-			numbers[i]=scan.nextInt();
+			index[i]=scan.nextInt();
 		}
-
-		System.out.print("\nEnter the number to check replaced:");
-		int temp=scan.nextInt();
-		
-
-		for(int j=0;j<size;j++)
+		do
 		{
-				if(numbers[j]==temp)
+			System.out.println();
+			System.out.print("\nArray of Value is: "+array+",and index value is: "+Arrays.toString(index));
+			System.out.println();
+		
+			System.out.print("\nFind the Array index Value: ");
+			search = scan.nextInt();
+			 for(int j=0;j<array;j++)
 			{
-				System.out.print("The "+temp+" is found\n");
-				System.out.print("Enter the value:");
-				numbers[j]=scan.nextInt();
-				System.out.println("The array is:");
-				for(int k=0;k<size;k++)
+				if(index[j]==search)
 				{
-					System.out.println(numbers[k]);
+					System.out.print("\nReplace Value is: ");
+					replace = scan.nextInt();
+					index[j]=replace;
+					count++;
 				}
-				break;
-				
 			}
-			else 
+			System.out.print("\nArray of Value is: "+array+",and index value is: "+Arrays.toString(index));
+			System.out.println();
+			if(count>0)
 			{
-				System.out.println("Not found");
-				break;
+				System.out.print("Index Modified");
+				System.out.println();
 			}
-
+			else
+			{
+				System.out.print("Index Not Found");
+				System.out.println();
+			}
+			System.out.print("\nContinue the Voting Process[Y/N]:");	//y	
+			rentry = scan.next().charAt(0);
 		}
-
-		
-
+		while((rentry =='Y') ||(rentry == 'y'));
 	}
 }

@@ -9,39 +9,32 @@ class MatrixAdd
 
 	public static void addMatrix()
 	{
-		int row1,row2,column1,column2;
+		int row,column;
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Row count for matrix1: ");
-		row1 = scan.nextInt();
+		System.out.print("Row count for matrix: ");
+		row = scan.nextInt();
 
-		System.out.println("Column count for matrix1: ");
-		column1 = scan.nextInt();
+		System.out.print("Column count for matrix: ");
+		column = scan.nextInt();
 
-		System.out.println("Row count for matrix2: ");
-		row2 = scan.nextInt();
+		int matrix1[][] = new int[row][column];
+		int matrix2[][] = new int[row][column];
+		int matrix3[][] = new int[row][column];
 
-		System.out.println("Column count for matrix2: ");
-		column2 = scan.nextInt();
+		System.out.println("\nEnter the matrix 1 value: \n");
 
-
-		int matrix1[][] = new int[row1][column1];
-		int matrix2[][] = new int[row2][column2];
-		int matrix3[][] = new int[row1][column1];
-
-		System.out.println("\nEnter the matrix 1 value: ");
-
-		for(int i=0;i<row1;i++)
+		for(int i=0;i<row;i++)
 		{
-			for(int j=0;j<column1;j++)
+			for(int j=0;j<column;j++)
 			{
 				matrix1[i][j]=scan.nextInt();
 			}
 		}
 
-		System.out.println("\nEnter the matrix 2 value: ");
-		for(int i=0;i<row2;i++)
+		System.out.println("\nEnter the matrix 2 value: \n");
+		for(int i=0;i<row;i++)
 		{
-			for(int j=0;j<column2;j++)
+			for(int j=0;j<column;j++)
 			{
 				matrix2[i][j]=scan.nextInt();
 			}
@@ -49,28 +42,43 @@ class MatrixAdd
 
 		System.out.println();
 		
-		if(row1!=row2 || column1!=column2)
-		{
-			System.out.println("matrices are not equal");
-		}
-
-		else 
-		{
-			for(int i=0;i<row1;i++)
+			for(int i=0;i<row;i++)
 			{
-				for(int j=0;j<column1;j++)
+				for(int j=0;j<column;j++)
 				{
 					matrix3[i][j]=matrix1[i][j]+matrix2[i][j];
 				}
 				
 			}
-		}
-		
-		System.out.println();
 
-		for(int i=0;i<row1;i++)
+			System.out.println("\nMatrix1:\n");
+
+			for(int i=0;i<row;i++)
 			{
-				for(int j=0;j<column1;j++)
+				for(int j=0;j<column;j++)
+				{
+					System.out.print(matrix1[i][j]+" ");
+				}
+				System.out.println();
+			}
+
+			System.out.println("\nMatrix2:\n");
+
+			for(int i=0;i<row;i++)
+			{
+				for(int j=0;j<column;j++)
+				{
+					System.out.print(matrix2[i][j]+" ");
+				}
+				System.out.println();
+			}
+		/*print matrix 1 and matrix2*/
+		
+		System.out.println("\nAddtion matrix:\n");
+
+		for(int i=0;i<row;i++)
+			{
+				for(int j=0;j<column;j++)
 				{
 					System.out.print(matrix3[i][j]+" ");
 				}
