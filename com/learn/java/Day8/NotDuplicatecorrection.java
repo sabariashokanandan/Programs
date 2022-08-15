@@ -1,47 +1,45 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 class NotDuplicate
 {
 	public static void main(String[] args)
 	{
-		withoutDuplicates();
+		notDuplication();
 	}
 
-	public static void withoutDuplicates()
+	public static void notDuplication()
 	{
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nEnter the Array size: ");
-		int size = scan.nextInt();
+		System.out.print("\nGiven Array index Size: ");
+		int index = scan.nextInt();
 
-		int num[] = new int[size];
-		int temp;
-
-		System.out.println("\nEnter the Array values: ");
-		for(int i=0;i<size;i++)
+		int check=0;
+		int[] array = new int[index];
+		System.out.println("Enter the array index Value: ");
+		for(int i=0;i<index;i++)
 		{
-			temp=scan.nextInt();//1
-
-			for(int j=0;j<size;j++)
+			array[i]=scan.nextInt();
+			if(array[i]>check)
 			{
-				if(temp!=num[j])//1==1
-				{
-					num[i]=temp;
-				}
-
-				else 
-				{
-					System.out.println("Duplicate not allowed");
-					System.out.println("Enter another number");
-					break;
-				}
+				check=array[i];
+			}
+			else if(array[i]==check)
+			{
+				System.out.println("Duplicate not allowed. Please enter another number.");
+				i--;
+			}
+			else
+			{
+				System.out.println("Number must be greater than previous Value.");
+				i--;
 			}
 		}
-
-		System.out.print("\nArray values: ");
-		for(int i=0;i<size;i++)
+		System.out.print("\nArray of index ");
+		for(int i=0;i<index;i++)
 		{
-			System.out.print(num[i]+" ");
+			System.out.print(array[i]+" ");
 		}
-
-	}
+		System.out.println();
+	}	
 }

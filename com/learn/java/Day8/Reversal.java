@@ -1,21 +1,32 @@
 import java.io.*;
 
-class Reversal
+import java.util.Scanner;
+
+public class Reversal
 {
-	public static void main(String args[])
-	{
-		String word="sun flower",rev="";
-		char a;
+	public static void main(String[] args)
+   {
+      reverseWord();
+   }
 
-		System.out.println("Original word:"+word);
+   public static void reverseWord()
+   {
+      Scanner scan = new Scanner(System.in);
+      System.out.print("\nEnter your String: ");
+      String str=scan.nextLine();
 
-		int len=word.length();
+      String[] words=str.split(" ");
+      String reverseString="";
 
-		for(int i=len-1;i>=0;i--)
-		{
-			rev=rev+word.charAt(i);
-		}
-
-		System.out.println("Reversal word:"+rev);
-	}
+      for(String w:words)
+      {
+         String reversewords="";
+         for(int i=w.length()-1;i>=0;i--)
+         {
+            reversewords=reversewords+w.charAt(i);
+         }
+         reverseString=reverseString+reversewords+" ";
+      }
+      System.out.println("\nReverse String"+reverseString);
+   }
 }
