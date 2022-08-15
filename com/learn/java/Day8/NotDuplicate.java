@@ -11,12 +11,12 @@ class NotDuplicate
 	public static void notDuplication()
 	{
 		Scanner scan = new Scanner(System.in);
-		System.out.print("\nGiven Array index Size: ");
+		System.out.print("\nGiven Array Size: ");
 		int index = scan.nextInt();
 
-		int check=0;
+		int check=Integer.MIN_VALUE;
 		int[] array = new int[index];
-		System.out.println("Enter the array index Value: ");
+		System.out.println("Enter the array  Value: ");
 		for(int i=0;i<index;i++)
 		{
 			array[i]=scan.nextInt();
@@ -35,7 +35,7 @@ class NotDuplicate
 				i--;
 			}
 		}
-		System.out.print("\nArray of index ");
+		System.out.print("\nArray of given ");
 		for(int i=0;i<index;i++)
 		{
 			System.out.print(array[i]+" ");
