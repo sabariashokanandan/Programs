@@ -10,54 +10,39 @@ public static void main(String[] args)
 public static void checkMatrix()
 {
 		boolean check=true;
-		int row1,row2,column1,column2;
+		int row,column;
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Row count for matrix1: ");
-		row1 = scan.nextInt();
+		System.out.println("Row count for matrix: ");
+		row = scan.nextInt();
 
-		System.out.println("Column count for matrix1: ");
-		column1 = scan.nextInt();
+		System.out.println("Column count for matrix: ");
+		column = scan.nextInt();
 
-		System.out.println("Row count for matrix2: ");
-		row2 = scan.nextInt();
-
-		System.out.println("Column count for matrix2: ");
-		column2 = scan.nextInt();
-
-
-		int matrix1[][] = new int[row1][column1];
-		int matrix2[][] = new int[row2][column2];
+		int matrix1[][] = new int[row][column];
+		int matrix2[][] = new int[row][column];
 
 		System.out.println("\nEnter the matrix 1 value: ");
 
-		for(int i=0;i<row1;i++)
+		for(int i=0;i<row;i++)
 		{
-			for(int j=0;j<column1;j++)
+			for(int j=0;j<column;j++)
 			{
 				matrix1[i][j]=scan.nextInt();
 			}
 		}
 
 		System.out.println("\nEnter the matrix 2 value: ");
-		for(int i=0;i<row2;i++)
+		for(int i=0;i<row;i++)
 		{
-			for(int j=0;j<column2;j++)
+			for(int j=0;j<column;j++)
 			{
 				matrix2[i][j]=scan.nextInt();
 			}
 		}
 
-		if(row1!=row2 || column1!=column2)
-		{
-			System.out.println("matrices are not equal");
-			check=false;
-		}
-
-		else
-		{
-			for(int i=0;i<row1;i++)
+			for(int i=0;i<row;i++)
 			{
-				for(int j=0;j<column1;j++)
+				for(int j=0;j<column;j++)
 				{
 					if(matrix1[i][j]!=matrix2[i][j])
 					{
@@ -66,15 +51,14 @@ public static void checkMatrix()
 					}
 				}
 			}
-		}
 
 		if(check)
 		{
-			System.out.println("Matrices are equal");
+			System.out.println("\nMatrices are equal");
 		}
 		else 
 		{
-			System.out.println("Matrices are not equal");
+			System.out.println("\nMatrices are not equal");
 		}
 
 		
