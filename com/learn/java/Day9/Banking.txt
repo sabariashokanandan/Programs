@@ -1,0 +1,13 @@
+Banking Process:-
+
+Account creation,deletion,debt transaction,credit transaction,account status,mobile number address change,aadhar link
+
+Client Attributes:-
+
+name,Account no,pancard no,address,mobile no,customer id,aadhar no
+
+Employee Attributes:-
+
+name,empolyeed id,contact no
+
+
