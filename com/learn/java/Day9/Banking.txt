@@ -1,6 +1,6 @@
 Banking Process:-
 
-Account creation,deletion,debt transaction,credit transaction,account status,mobile number address change,aadhar link
+Account opening,closing,deposit,withdrawl,account status,profile change,aadhar link,internet banking facility
 
 Client Attributes:-
 
@@ -8,6 +8,53 @@ name,Account no,pancard no,address,mobile no,customer id,aadhar no
 
 Employee Attributes:-
 
-name,empolyeed id,contact no
+name,empolyeed id,contact no,designation,department
 
 
+Deposit:-
+
+input:-
+Account no,cust id,name,denomination count,sign,total deposit amount
+
+Output:-
+messsage about sucess,account balance
+
+Withdrawl:-
+
+Input:-
+Account no,withdrawl amount,cust id,sign,name
+
+Output:-
+cash,received message
+
+Account opening:-
+
+input:-
+name,pan no,address proof,sign,date of birth,opening amt,account type,internet banking faclity,atm card,mobile no
+
+Output:-
+Account created message,total account balance
+
+Account closing- 
+
+Input:-
+name,account no.cust id,sign
+
+Output:-
+deposit amount,all facility closed
+
+Money Transfer:-
+
+Input:-
+other account no,transfer amount,ifsc code,imps or neft,bank name,otp
+
+Output:-
+Notificcation,reduction of transfer amount in account balance
+
+Loan Mortgage:-
+
+Input:
+account no,loan amount
+
+Output:-
+Notification message,interest rate
