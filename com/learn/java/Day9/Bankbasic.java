@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 
-class AccountOpen
+class Account
 {
 	private String customerName;
 	private int accountNo;
@@ -37,16 +37,27 @@ class AccountOpen
 		this.openBalance = openBalance;
 	}
 
+	public void setDeposit(int deposit)
+	{
+		this.openBalance+=deposit;
+	}
+
+	public void setWithdraw(int withdraw)
+	{
+		this.openBalance-=withdraw;
+	}
+
 }
 
-class Bankbasic
+class BankBasic
 {
 	public static void main(String[] args)
 	{
 		int option,accountNo,openBalance;
 		String customerName;
 		Scanner scan = new Scanner(System.in);
-		ArrayList<AccountOpen> hash = new ArrayList<AccountOpen>();
+		ArrayList<Account> hash = new ArrayList<Account>();
+		Account st = new Account();
 		
 
 		do
@@ -55,8 +66,11 @@ class Bankbasic
 			System.out.print("\n******** Banking ********\n");
 			System.out.print("\n 1.Account Opening");
 			System.out.print("\n 2.Search account");
-			System.out.print("\n 3.Application Closing");
-			System.out.print("\n 4.View all accounts");
+			System.out.print("\n 3.Deposit amount");
+			System.out.print("\n 4.Withdraw amount");
+			System.out.print("\n 5.Close account");
+			System.out.print("\n 6.View all accounts");
+			System.out.print("\n 7.Application Closing");
 			System.out.println();
 			System.out.print("\nSelect your option: ");
 			option = scan.nextInt();
@@ -68,14 +82,14 @@ class Bankbasic
 				case 1:
 							System.out.println("\n===== Opening New Account =====");
 							System.out.print("\nAccount Number: ");
-							accountNo = scan.nextInt();
+							accountNo = scan.nextInt();accountNo = scan.nextInt();
 
 							System.out.print("Customer Name: ");
 							customerName = scan.next();
 
 							System.out.print("Opening Balance: ");
 							openBalance = scan.nextInt();
-							AccountOpen st = new AccountOpen();
+							
 
 							st.setAccountNo(accountNo);
 							st.setCustomerName(customerName);
@@ -89,8 +103,26 @@ class Bankbasic
 					System.out.println("\n"+hash.get(search));
 					break;
 
-
 				case 3:
+					System.out.print("\nEnter Account number");
+					accountNo = scan.nextInt();
+					System.out.print("\nEnter deposit amount");
+					int deposit = scan.nextInt();
+					st.setDeposit(deposit);
+					hash.add(st);
+					System.out.println("\nAdded deposit succesfully");
+
+				case 4:
+					System.out.print("\nEnter Account number");
+					accountNo = scan.nextInt();
+					System.out.print("\nEnter deposit amount");
+					int withdraw = scan.nextInt();
+					st.setWithdraw(withdraw);
+					hash.add(st);
+					System.out.println("\nWithdraw amount rs " + withdraw + " successfully");
+
+
+				case 5:
 					System.out.println("Enter closing account no");
 					int accNo=scan.nextInt();
 					hash.remove(accNo);
@@ -98,11 +130,11 @@ class Bankbasic
 					System.out.println("\nThe Banking Application will be closed...");
 					break;
 
-				case 4:
+				case 6:
 					System.out.println("View all accounts");
 					for(int i=0;i<hash.size();i++)
 					{
-						AccountOpen account = /*(AccountOpen)*/ hash.get(i);
+						Account account = /*(Account)*/ hash.get(i);
 						System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
 					}
 					break;
