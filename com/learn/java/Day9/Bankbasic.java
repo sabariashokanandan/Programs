@@ -82,7 +82,7 @@ class BankBasic
 				case 1:
 							System.out.println("\n===== Opening New Account =====");
 							System.out.print("\nAccount Number: ");
-							accountNo = scan.nextInt();accountNo = scan.nextInt();
+							accountNo = scan.nextInt();
 
 							System.out.print("Customer Name: ");
 							customerName = scan.next();
@@ -90,36 +90,43 @@ class BankBasic
 							System.out.print("Opening Balance: ");
 							openBalance = scan.nextInt();
 							
-
 							st.setAccountNo(accountNo);
 							st.setCustomerName(customerName);
 							st.setOpenBalance(openBalance);
 							hash.add(st);
 							System.out.println("The number of records :"+ hash.size());
-						 break;
+						    break;
+
 				case 2:
 					System.out.println("\nSearch an Account Details");
 					int search = scan.nextInt();
+
 					System.out.println("\n"+hash.get(search));
 					break;
 
 				case 3:
 					System.out.print("\nEnter Account number");
 					accountNo = scan.nextInt();
+
 					System.out.print("\nEnter deposit amount");
 					int deposit = scan.nextInt();
+
 					st.setDeposit(deposit);
 					hash.add(st);
 					System.out.println("\nAdded deposit succesfully");
+					break;
 
 				case 4:
 					System.out.print("\nEnter Account number");
 					accountNo = scan.nextInt();
+
 					System.out.print("\nEnter deposit amount");
 					int withdraw = scan.nextInt();
+
 					st.setWithdraw(withdraw);
 					hash.add(st);
 					System.out.println("\nWithdraw amount rs " + withdraw + " successfully");
+					break;
 
 
 				case 5:
