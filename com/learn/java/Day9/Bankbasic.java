@@ -57,7 +57,7 @@ class BankBasic
 		String customerName;
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Account> hash = new ArrayList<Account>();
-		Account st = new Account();
+		
 		
 
 		do
@@ -68,9 +68,8 @@ class BankBasic
 			System.out.print("\n 2.Search account");
 			System.out.print("\n 3.Deposit amount");
 			System.out.print("\n 4.Withdraw amount");
-			System.out.print("\n 5.Close account");
-			System.out.print("\n 6.View all accounts");
-			System.out.print("\n 7.Application Closing");
+			System.out.print("\n 5.View all accounts");
+			System.out.print("\n 6.Application Closing");
 			System.out.println();
 			System.out.print("\nSelect your option: ");
 			option = scan.nextInt();
@@ -89,7 +88,8 @@ class BankBasic
 
 							System.out.print("Opening Balance: ");
 							openBalance = scan.nextInt();
-							
+							Account st = new Account();
+
 							st.setAccountNo(accountNo);
 							st.setCustomerName(customerName);
 							st.setOpenBalance(openBalance);
@@ -99,45 +99,72 @@ class BankBasic
 
 				case 2:
 					System.out.println("\nSearch an Account Details");
+					System.out.print("\nEnter an Account Number:");
 					int search = scan.nextInt();
 
-					System.out.println("\n"+hash.get(search));
+					for(int i=0;i<hash.size();i++)
+					{
+						Account account = /*(Account)*/ hash.get(i);
+						if(account.getAccountNo()==search)
+						{
+							System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+							break;
+						}
+						{
+							System.out.println("\nenter the correct number");
+						}
+					}
 					break;
+					/*System.out.println("\n"+hash.get(search));
+					break;*/
 
 				case 3:
-					System.out.print("\nEnter Account number");
+					System.out.print("\nEnter Account number: ");
 					accountNo = scan.nextInt();
 
-					System.out.print("\nEnter deposit amount");
+					System.out.print("\nEnter deposit amount: ");
 					int deposit = scan.nextInt();
 
-					st.setDeposit(deposit);
-					hash.add(st);
+					for(int i=0;i<hash.size();i++)
+					{
+						Account account = /*(Account)*/ hash.get(i);
+						if(account.getAccountNo()==accountNo)
+						{
+							account.setDeposit(deposit);
+							break;
+						}
+					}
+
+					/*st.setDeposit(deposit);
+					//hash.add(st);*/
+
 					System.out.println("\nAdded deposit succesfully");
 					break;
 
 				case 4:
-					System.out.print("\nEnter Account number");
+					System.out.print("\nEnter Account number: ");
 					accountNo = scan.nextInt();
 
-					System.out.print("\nEnter deposit amount");
+					System.out.print("\nEnter Withdraw amount: ");
 					int withdraw = scan.nextInt();
 
-					st.setWithdraw(withdraw);
-					hash.add(st);
+					for(int i=0;i<hash.size();i++)
+					{
+						Account account = /*(Account)*/ hash.get(i);
+						if(account.getAccountNo()==accountNo)
+						{
+							account.setWithdraw(withdraw);
+							break;
+						}
+					}
+
+					/*st.setWithdraw(withdraw);
+					hash.add(st);*/
 					System.out.println("\nWithdraw amount rs " + withdraw + " successfully");
 					break;
 
 
 				case 5:
-					System.out.println("Enter closing account no");
-					int accNo=scan.nextInt();
-					hash.remove(accNo);
-
-					System.out.println("\nThe Banking Application will be closed...");
-					break;
-
-				case 6:
 					System.out.println("View all accounts");
 					for(int i=0;i<hash.size();i++)
 					{
@@ -145,10 +172,16 @@ class BankBasic
 						System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
 					}
 					break;
+					
+				case 6:
+					System.out.println("\nThe Banking Application will be closed...");
+					break;
+
+					
 
 
 			}
 			
-		}while(option<5);
+		}while(option<6);
 	}
 }  
