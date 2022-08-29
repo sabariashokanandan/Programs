@@ -69,7 +69,8 @@ class BankBasic
 			System.out.print("\n 3.Deposit amount");
 			System.out.print("\n 4.Withdraw amount");
 			System.out.print("\n 5.View all accounts");
-			System.out.print("\n 6.Application Closing");
+			System.out.print("\n 6.Account closing");
+			System.out.print("\n 7.Application Closing");
 			System.out.println();
 			System.out.print("\nSelect your option: ");
 			option = scan.nextInt();
@@ -104,7 +105,7 @@ class BankBasic
 
 					for(int i=0;i<hash.size();i++)
 					{
-						Account account = /*(Account)*/ hash.get(i);
+						Account account = hash.get(i);
 						if(account.getAccountNo()==search)
 						{
 							System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
@@ -127,7 +128,7 @@ class BankBasic
 
 					for(int i=0;i<hash.size();i++)
 					{
-						Account account = /*(Account)*/ hash.get(i);
+						Account account = hash.get(i);
 						if(account.getAccountNo()==accountNo)
 						{
 							account.setDeposit(deposit);
@@ -150,7 +151,7 @@ class BankBasic
 
 					for(int i=0;i<hash.size();i++)
 					{
-						Account account = /*(Account)*/ hash.get(i);
+						Account account = hash.get(i);
 						if(account.getAccountNo()==accountNo)
 						{
 							account.setWithdraw(withdraw);
@@ -172,8 +173,24 @@ class BankBasic
 						System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
 					}
 					break;
-					
+
 				case 6:
+					System.out.print("\nEnter Account number: ");
+					accountNo = scan.nextInt();
+
+					for(int i=0;i<hash.size();i++)
+					{
+						Account account = hash.get(i);
+						if(account.getAccountNo()==accountNo)
+						{
+							hash.remove(i);
+							System.out.println("\n" + account.getAccountNo() + " is closed");
+							break;
+						}
+					}
+					break;
+					
+				case 7:
 					System.out.println("\nThe Banking Application will be closed...");
 					break;
 
@@ -182,6 +199,6 @@ class BankBasic
 
 			}
 			
-		}while(option<6);
+		}while(option<7);
 	}
 }  
