@@ -56,8 +56,8 @@ class Account
 class Bank
 {
 	
-	
-	private ArrayList<Account> list = new ArrayList<Account>();
+	private HashMap<Integer,Account> list = new HashMap <Integer,Account>();
+	//private ArrayList<Account> list = new ArrayList<Account>();
 
 	private void openAccount()
 	{
@@ -79,28 +79,64 @@ class Bank
 		st.setAccountNo(accountNo);
 		st.setCustomerName(customerName);
 		st.setOpenBalance(openBalance);
-		list.add(st);
+		list.put(accountNo,st);
+		System.out.println(list.get(1).getAccountNo());
 	}
 
 	private void searchAccount()
 	{
 		Scanner scan = new Scanner(System.in);
+		int value=-1;
 
 		System.out.println("\nSearch an Account Details");
 		System.out.print("\nEnter an Account Number:");
+		
 		int search = scan.nextInt();
-		Account st = new Account();
-		int position=st.indexOf(search);
 
-			if(position!=-1)
+		for(int i=0;i<list.size();i++)
+		{
+			int j=list.size()-i;
+			Account account1 = list.get(i);
+			Account account2 = list.get(j);
+
+			if(account1.getAccountNo()==search)
 			{
-				Account account = list.get(position);
-				System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+				
+				value=i;
+				break;
 			}
-			else 
+			else if(account2.getAccountNo()==search)
+			{
+				value=j;
+				break;
+			}
+
+		}
+
+		if(value>=0)
+		{
+			Account account = list.get(value);
+			System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+		}
+		else 
+		{
+			System.out.println("Enter corect number");
+		}
+
+		/*for(int i=0;i<list.size();i++)
+		{
+			Account account = list.get(i);
+			if(account.getAccountNo()==search)
+			{
+				System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+				break;
+			}
+			else
 			{
 				System.out.println("\nenter the correct number");
 			}
+
+		} */
 
 
 		/*for(int i=0;i<list.size();i++)
@@ -117,6 +153,20 @@ class Bank
 			}
 
 		} */
+
+		/*int position=list.indexOf(search);
+
+		System.out.println("position:"+ position);
+
+			if(position!=-1)
+			{
+				Account account = list.get(position);
+				System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+			}
+			else 
+			{
+				System.out.println("\nenter the correct number");
+			}*/
 		
 	}
 
@@ -131,14 +181,10 @@ class Bank
 		System.out.print("\nEnter deposit amount: ");
 		int deposit = scan.nextInt();
 
-		for(int i=0;i<list.size();i++)
+		Account account = list.get(accountNo);
+		if(account.getAccountNo()==accountNo)
 		{
-			Account account = list.get(i);
-			if(account.getAccountNo()==accountNo)
-			{
-				account.setDeposit(deposit);
-				break;
-			}
+			account.setDeposit(deposit);
 		}
 
 		/*st.setDeposit(deposit);
@@ -168,14 +214,10 @@ class Bank
 		System.out.print("\nEnter Withdraw amount: ");
 		int withdraw = scan.nextInt();
 
-		for(int i=0;i<list.size();i++)
+		Account account = list.get(accountNo);
+		if(account.getAccountNo()==accountNo)
 		{
-			Account account = list.get(i);
-			if(account.getAccountNo()==accountNo)
-			{
-				account.setWithdraw(withdraw);
-				break;
-			}
+			account.setWithdraw(withdraw);
 		}
 
 		/*st.setWithdraw(withdraw);
@@ -186,9 +228,11 @@ class Bank
 	private void viewAll()
 	{
 		System.out.println("View all accounts");
-		for(int i=0;i<list.size();i++)
-		{
-			Account account = /*(Account)*/ list.get(i);
+		for(Map.Entry pairEntry: list.entrySet())
+        {
+        	 Account account = /*(Account)*/ list.get(pairEntry.getKey());
+        	 //System.out.print("All Customer Details: "+list.get(i));
+			//Account account = /*(Account)*/ list.get(i);
 			System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
 		}
 	}
@@ -201,16 +245,13 @@ class Bank
 		System.out.print("\nEnter Account number: ");
 		accountNo = scan.nextInt();
 
-		for(int i=0;i<list.size();i++)
+		Account account = list.get(accountNo);
+		if(account.getAccountNo()==accountNo)
 		{
-			Account account = list.get(i);
-			if(account.getAccountNo()==accountNo)
-			{
-				list.remove(i);
-				System.out.println("\n" + account.getAccountNo() + " is closed");
-				break;
-			}
+			list.remove(accountNo);
+			System.out.println("\n" + account.getAccountNo() + " is closed");
 		}
+		
 	}
 
 
@@ -222,7 +263,6 @@ class Bank
 
 		do
 		{
-			
 			System.out.print("\n******** Banking ********\n");
 			System.out.print("\n 1.Account Opening");
 			System.out.print("\n 2.Search account");
@@ -233,19 +273,17 @@ class Bank
 			System.out.print("\n 7.Application Closing");
 			System.out.println();
 			System.out.print("\nSelect your option: ");
-			option = scan.nextInt();
-			
-			
+			option = scan.nextInt();	
 
+			
 			switch(option)
 			{
 				case 1:
-							object.openAccount();
-							//System.out.println("The number of records :"+ list.size());
-						    break;
+					object.openAccount();
+					//System.out.println("The number of records :"+ list.size());
+					break;
 
 				case 2:
-					
 					object.searchAccount();
 					break;
 					/*System.out.println("\n"+list.get(search));
@@ -271,9 +309,6 @@ class Bank
 				case 7:
 					System.out.println("\nThe Banking Application will be closed...");
 					break;
-
-					
-
 
 			}
 			
