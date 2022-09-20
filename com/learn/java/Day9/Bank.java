@@ -76,52 +76,37 @@ class Bank
 		openBalance = scan.nextInt();
 		Account st = new Account();
 
+		/*System.out.println(accountNo);
+		System.out.println(st);
+		System.out.println(list);*/
+
 		st.setAccountNo(accountNo);
 		st.setCustomerName(customerName);
 		st.setOpenBalance(openBalance);
 		list.put(accountNo,st);
-		System.out.println(list.get(1).getAccountNo());
 	}
 
 	private void searchAccount()
 	{
 		Scanner scan = new Scanner(System.in);
-		int value=-1;
 
 		System.out.println("\nSearch an Account Details");
 		System.out.print("\nEnter an Account Number:");
 		
 		int search = scan.nextInt();
 
-		for(int i=0;i<list.size();i++)
-		{
-			int j=list.size()-i;
-			Account account1 = list.get(i);
-			Account account2 = list.get(j);
+		Account account = list.get(search);
 
-			if(account1.getAccountNo()==search)
-			{
-				
-				value=i;
-				break;
-			}
-			else if(account2.getAccountNo()==search)
-			{
-				value=j;
-				break;
-			}
-
-		}
-
-		if(value>=0)
-		{
-			Account account = list.get(value);
-			System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
-		}
-		else 
+		if(account.getAccountNo()==0)
 		{
 			System.out.println("Enter corect number");
 		}
+		
+		else
+		{
+			System.out.println(account.getAccountNo() + "\t" + account.getCustomerName() + "\t" + account.getOpenBalance());
+		}
+
 
 		/*for(int i=0;i<list.size();i++)
 		{
@@ -191,15 +176,6 @@ class Bank
 		//list.add(st);*/
 
 		System.out.println("\nAdded deposit succesfully");
-
-		System.out.println("Last Deposit transactions:");
-		for (int i = 0; i < list.size(); i++) 
-		{
-
-            System.out.println(i + 1 + ". " +
-            " Rs" + list.get(i).getDeposit());
-
-        }
 
 	}
 
